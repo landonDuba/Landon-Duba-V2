@@ -1,5 +1,7 @@
 import './App.css';
 import {useState} from "react";
+import { Navbar } from "./components/Navbar";
+import { Card } from "./components/Card";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -10,10 +12,8 @@ function App() {
 
   return (
     <div className="App" data-theme={theme}>
-      <button onClick={toggleTheme} className='toggleBTN'>
-          Toggle theme
-      </button>
-      <p>This is a test</p>
+      <Navbar modeSwitch={toggleTheme}/>
+      <Card/>
     </div>
   );
 }
