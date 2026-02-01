@@ -28,3 +28,7 @@
     justify-content: space-around;
     align-items: flex-end;
 }
+
+.links a {
+    color: var(--text)
+}

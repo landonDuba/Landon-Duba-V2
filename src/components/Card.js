@@ -2,7 +2,12 @@ import './Card.css';
 
 export function Card() {
 
-    const links = ["GitHub", "LeetCode", "LinkedIn", "Resume"];
+    const links = [
+        {name: "GitHub", link: "https://github.com/landonDuba"},
+        {name: "LeetCode", link: "https://leetcode.com/u/LandonDuba/"}, 
+        {name: "LinkedIn", link: "https://www.linkedin.com/in/landonduba/"}, 
+        {name: "Resume", link: "/resume.pdf"}
+    ];
 
     return (
         <div className="card-holder">
@@ -13,7 +18,7 @@ export function Card() {
                 </div>
                 <div className='links'>
                     {links.map((link) => 
-                        (<p>{link}</p>)
+                        (<a href={link.link} target="_blank" rel="noopener noreferrer" >{link.name}</a>)
                     )}
                 </div>
             </div>
