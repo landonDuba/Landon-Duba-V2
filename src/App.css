@@ -1,11 +1,13 @@
 :root {
   --bg: rgb(40, 39, 39);
   --text: white;
+  --second: rgb(59, 58, 58);
 }
 
 [data-theme="dark"] {
-  --bg: white;
+  --bg: rgb(237, 233, 231);
   --text: rgb(40, 39, 39);
+  --second: #f7f3f1;
 }
 
 .App {
