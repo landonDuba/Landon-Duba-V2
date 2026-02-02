@@ -1,0 +1,56 @@
+img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-right: 0; /* Remove right margin */
+    position: absolute; /* Position image absolutely */
+    left: 20px;
+}
+
+.experience {
+    background-color: var(--second);
+    height: 15vh;
+    width: 70vh;
+    border: 0px black solid;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    transition: .5s ease;
+    position: relative; /* Add relative positioning */
+}
+
+.experience:hover{
+    height: 15vh;
+    width: 75vh;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2px;
+    margin: 0px;
+}
+
+.inner h3,
+.inner h4,
+.inner h5 {
+    margin: 0;
+}
+
+.inner h4 {
+    font-size: 1rem;
+}
+
+.inner h3 {
+    font-size: 1.1rem;
+}
+
+.inner h5 {
+    font-size: 0.9rem;
+}

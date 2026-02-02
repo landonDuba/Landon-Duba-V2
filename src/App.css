@@ -1,7 +1,7 @@
 :root {
-  --bg: rgb(40, 39, 39);
+  --bg: #0f1115;
   --text: white;
-  --second: rgb(59, 58, 58);
+  --second: #2a2d32;
 }
 
 [data-theme="dark"] {
@@ -17,4 +17,29 @@
   background-color: var(--bg);
   color: var(--text);
   padding: 20px;
+}
+
+.exp {
+  display: flex;
+  padding-top: 80px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+body{
+  background-color: var(--bg);
+}
+
+hr {
+  color: var(--second);
+  width: 80vw;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
 }
