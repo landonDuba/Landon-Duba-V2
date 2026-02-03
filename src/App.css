@@ -11,13 +11,22 @@
 }
 
 .App {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--bg);
   color: var(--text);
   padding: 20px;
+
+  background:
+    radial-gradient(
+      circle at var(--x, 50%) var(--y, 50%),
+      rgb(107, 107, 172),
+      var(--bg) 40%
+    );
+
+  transition: background 0.05s;
 }
+
 
 .exp {
   display: flex;
@@ -43,3 +52,4 @@ hr {
   justify-content: center;
   padding-bottom: 20px;
 }
+

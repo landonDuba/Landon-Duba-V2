@@ -22,6 +22,35 @@ function App() {
     {pic: "/vt.png", name: "Virginia Tech", title: "CS Major", date: "Aug. 2023 - Dec. 2026"},
   ]
 
+    useEffect(() => {
+    let lastMouseX = 0;
+    let lastMouseY = 0;
+
+    const updateGradient = () => {
+      document.body.style.setProperty("--x", `${lastMouseX + window.scrollX}px`);
+      document.body.style.setProperty("--y", `${lastMouseY + window.scrollY}px`);
+    };
+
+    const handleMouseMove = (e) => {
+      lastMouseX = e.clientX;
+      lastMouseY = e.clientY;
+      updateGradient();
+    };
+
+    const handleScroll = () => {
+      updateGradient();
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
   return (
     <div className="App" data-theme={theme}>
       <Navbar modeSwitch={toggleTheme}/>
